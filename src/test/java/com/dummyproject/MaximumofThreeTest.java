@@ -16,4 +16,10 @@ public class MaximumofThreeTest {
         Character character = maximum.threeCharacters();
         Assert.assertSame('c',character);
     }
+    @Test
+    public void shouldReturn_Maximum_forFloat() {
+        MaximumofThreeClass maximum = new MaximumofThreeClass();
+        Float aFloat = maximum.threeFloat();
+        Assert.assertEquals(3.0f,aFloat,0.01);
+    }
 }

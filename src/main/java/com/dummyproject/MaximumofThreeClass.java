@@ -32,7 +32,23 @@ public class MaximumofThreeClass {
         }
         return maximum;
     }
+
+    public Float threeFloat() {
+        Float firstnumber = 1.0f;
+        Float secondnumber = 2.0f;
+        Float lastnumber =3.0f;
+        Float maximum = lastnumber;
+        if (firstnumber.compareTo(maximum) > 0) {
+            maximum = firstnumber;
+        } else if (secondnumber.compareTo(maximum) > 0) {
+            maximum = secondnumber;
+        } else if (lastnumber.compareTo(maximum) > 0) {
+            maximum = lastnumber;
+        }
+        return maximum;
+    }
 }
+
 
 
 

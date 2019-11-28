@@ -6,22 +6,29 @@ import org.junit.Test;
 public class MaximumofThreeTest {
     @Test
     public void shouldReturn_Maximum_forIntegers() {
-        MaximumofThreeClass maximum = new MaximumofThreeClass();
-        Integer integer = maximum.printArray(10,20,30);
-        Assert.assertSame(30, integer);
+        MaximumofThreeClass<Integer> integerMaximumofThreeClass = new MaximumofThreeClass<>(10, 20, 30);
+        Integer comparable = integerMaximumofThreeClass.printArray();
+        Assert.assertSame(30, comparable);
     }
 
     @Test
     public void shouldReturn_Maximum_forCharacters() {
-        MaximumofThreeClass maximum = new MaximumofThreeClass();
-        Character character = maximum.printArray('a','b','c');
-        Assert.assertSame('c',character);
+        MaximumofThreeClass<Character> maximumofThreeClass = new MaximumofThreeClass<>('a', 'b', 'c');
+        Character comparable = maximumofThreeClass.printArray();
+        Assert.assertSame('c',comparable);
     }
 
     @Test
     public void shouldReturn_Maximum_forFloat() {
-        MaximumofThreeClass maximum = new MaximumofThreeClass();
-        Float aFloat = maximum.printArray(1.0f,2.0f,3.0f);
-        Assert.assertEquals(3.0f,aFloat,0.01);
+        MaximumofThreeClass<Float> maximumofThreeClass = new MaximumofThreeClass<>(1.0f, 2.0f, 3.0f);
+        Float comparable = maximumofThreeClass.printArray();
+        Assert.assertEquals(3.0f, comparable,0.01f);
+    }
+    @Test
+
+    public void shouldreturn_Maximum_forIntegersValue() {
+        MaximumofThreeClass<Integer> integerMaximumofThreeClass = new MaximumofThreeClass<>(2, 3, 5);
+        Comparable comparable = integerMaximumofThreeClass.printArray();
+        Assert.assertEquals(5,comparable);
     }
 }

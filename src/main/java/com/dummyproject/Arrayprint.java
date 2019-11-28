@@ -3,14 +3,20 @@ package com.dummyproject;
 public class Arrayprint {
 
     public static void main(String args[]){
-        int array[]={1,2,3};
-        double darray[]={1.0,2.0,3.0};
-        char carray[]={'a','b','c'};
-
+        Integer array[]={1,2,3};
+        Double darray[]={1.0,2.0,3.0};
+        Character carray[]={'a','b','c'};
         toPrint(array);
         toPrint(darray);
         toPrint(carray);
 
+
+    }
+
+    private static <E> void toPrint(E[] array) {
+        for(E i: array){
+            System.out.println(i);
+        }
     }
 
     private static void toPrint(char[] carray) {

@@ -4,6 +4,7 @@ public class MaximumofThreeClass<E extends Comparable> {
     E firstnumber;
     E secondnumber;
     E lastnumber;
+    E maximum;
 
     public MaximumofThreeClass(E firstnumber,E secondnumber,E lastnumber) {
         this.firstnumber=firstnumber;
@@ -20,8 +21,15 @@ public class MaximumofThreeClass<E extends Comparable> {
         } else if (lastnumber.compareTo(maximum) > 0) {
             maximum = (E) lastnumber;
         }
+        MaximumofThreeClass.printvalue(maximum);
         return maximum;
     }
+
+    private static <E extends Comparable> void printvalue(E maximum) {
+        System.out.println(maximum);
+    }
+
+
 }
 
 
